@@ -1,0 +1,25 @@
+CONDITION: cot   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A printer prints 18 pages per minute. A school needs 45 copies of a 24-page booklet. The printer must pause for 5 minutes after every 300 pages it prints, to cool down; no pause is needed after the final page. How many minutes does the whole print job take?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+First, we need to determine the total number of pages to be printed. Since each of the 45 copies of a 24-page booklet contains 1080 pages (45 * 24), the total number of pages is 1080.
+
+The printer prints 18 pages per minute. So, to print 1080 pages, it will take 1080 / 18 = 60 minutes. 
+
+Now, the printer needs to pause for 5 minutes after every 300 pages. The total number of pauses needed is the number of 300-page intervals in 1080 pages, which is 1080 / 300 = 3. Each pause is 5 minutes, so 3 pauses total 15 minutes.
+
+Therefore, the total time is the printing time plus the pauses: 60 + 15 = 75 minutes.
+
+Final Answer: 75
+
+---
+Extracted answer: 75.0  (via final_answer_line)
+Expected answer:  75
+Correct: True
+Output tokens: 206   Latency: 6.111 s

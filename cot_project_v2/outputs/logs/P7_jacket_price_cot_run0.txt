@@ -1,0 +1,26 @@
+CONDITION: cot   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A jacket costs $80. A shop marks the price up by 25%, then offers 30% off the marked-up price. A 5% sales tax is then added to the discounted price. What is the final price, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+First, let's calculate the marked-up price. The jacket's original price is $80, and it is marked up by 25%. The marked-up price is calculated as follows:
+\[ \text{Marked-up price} = 80 + (80 \times 0.25) = 80 \times 1.25 = 100 \]
+
+Next, the shop offers a 30% discount on the marked-up price. The discounted price is:
+\[ \text{Discounted price} = 100 - (100 \times 0.30) = 100 \times 0.70 = 70 \]
+
+Finally, a 5% sales tax is added to the discounted price. The final price is:
+\[ \text{Final price} = 70 + (70 \times 0.05) = 70 \times 1.05 = 73.50 \]
+
+Final Answer: 73.50
+
+---
+Extracted answer: 73.5  (via final_answer_line)
+Expected answer:  73.5
+Correct: True
+Output tokens: 221   Latency: 6.033 s

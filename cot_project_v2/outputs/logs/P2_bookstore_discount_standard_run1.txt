@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 1   temperature=0.7 seed=1
+
+PROMPT:
+Q: A bookstore sells novels for $15 each. They offer a promotion: buy 4 novels, get a 5th one free. Maria wants 13 novels. After applying the free-book promotion, she also gets an additional 10% off the total amount she has to pay. How much does she pay in total, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 143.08
+
+---
+Extracted answer: 143.08  (via final_answer_line)
+Expected answer:  148.5
+Correct: False
+Output tokens: 11   Latency: 2.405 s

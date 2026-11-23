@@ -1,0 +1,55 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Aisha starts with $0 and saves $45 per week. After 6 weeks, she spends $80 on a gift. She then doubles her weekly savings rate for the next 4 weeks. How much money does she have saved after these 10 weeks total, in dollars?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers:
+- Aisha starts with $0.
+- She saves $45 per week for the first 6 weeks.
+- She spends $80 on a gift after 6 weeks.
+- She doubles her weekly savings rate to $90 per week for the next 4 weeks.
+- We need to find out how much money she has saved after 10 weeks.
+
+Rules:
+- Initial savings are $0.
+- Savings rate is $45 per week for the first 6 weeks.
+- Savings rate doubles to $90 per week for the next 4 weeks.
+- She spends $80 on a gift after 6 weeks.
+
+Step 1: Calculate savings for the first 6 weeks.
+\[ 6 \text{ weeks} \times 45 \text{ dollars/week} = 270 \text{ dollars} \]
+
+Step 2: Subtract the cost of the gift after 6 weeks.
+\[ 270 \text{ dollars} - 80 \text{ dollars} = 190 \text{ dollars} \]
+
+Step 3: Calculate savings for the next 4 weeks with the doubled rate.
+\[ 4 \text{ weeks} \times 90 \text{ dollars/week} = 360 \text{ dollars} \]
+
+Step 4: Add the savings from the next 4 weeks to the remaining amount after the gift.
+\[ 190 \text{ dollars} + 360 \text{ dollars} = 550 \text{ dollars} \]
+
+Check:
+- Initial savings: $0.
+- Savings for the first 6 weeks: $270.
+- Remaining after gift: $190.
+- Savings for the next 4 weeks: $360.
+- Total savings: $550.
+
+Final Answer: 550
+
+---
+Extracted answer: 550.0  (via final_answer_line)
+Expected answer:  550
+Correct: True
+Output tokens: 391   Latency: 11.064 s

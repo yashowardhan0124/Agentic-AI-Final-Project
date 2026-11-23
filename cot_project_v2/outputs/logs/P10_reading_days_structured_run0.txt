@@ -1,0 +1,63 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Liam reads 35 pages per day on weekdays (Monday to Friday) and 50 pages per day on Saturdays and Sundays. His book has 480 pages and he has already read 125 of them. He starts reading again on a Monday, which counts as day 1. On which day number does he finish the book?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers:
+- Liam reads 35 pages per day on weekdays (Monday to Friday).
+- Liam reads 50 pages per day on Saturdays and Sundays.
+- His book has 480 pages.
+- He has already read 125 pages.
+- He starts reading again on a Monday, which counts as day 1.
+
+Rules:
+- Liam reads 35 pages per day from Monday to Friday.
+- Liam reads 50 pages per day on Saturdays and Sundays.
+- The book has 480 pages.
+- Liam has already read 125 pages.
+
+Step 1: Calculate the total pages Liam needs to read to finish the book.
+\[ 480 - 125 = 355 \text{ pages} \]
+
+Step 2: Determine how many days it will take to read the remaining 355 pages at the weekday rate (35 pages per day).
+\[ \frac{355}{35} \approx 10.14 \]
+Since Liam can't read a fraction of a day, we round up to the next whole number.
+\[ \text{Days} = 11 \]
+
+Step 3: Calculate the total pages read in these 11 days.
+\[ 11 \times 35 = 385 \text{ pages} \]
+
+Step 4: Determine how many pages are left after 11 days.
+\[ 355 - 385 = -30 \]
+Since this is negative, it means Liam has already read more than the remaining pages. Therefore, he finishes the book on the 11th day.
+
+Step 5: Determine the day of the week for the 11th day.
+- Starting from Monday, the 11th day is:
+\[ 11 \mod 7 = 4 \]
+So, the 11th day is Thursday.
+
+Check:
+- Step 1: \( 480 - 125 = 355 \) pages.
+- Step 2: \( \frac{355}{35} \approx 10.14 \) days, rounded up to 11 days.
+- Step 3: \( 11 \times 35 = 385 \) pages read.
+- Step 4: \( 355 - 385 = -30 \) pages left (meaning he finishes on the 11th day).
+- Step 5: The 11th day is Thursday.
+
+Final Answer: 11
+
+---
+Extracted answer: 11.0  (via final_answer_line)
+Expected answer:  10
+Correct: False
+Output tokens: 541   Latency: 14.202 s

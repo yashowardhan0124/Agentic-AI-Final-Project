@@ -1,0 +1,59 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A printer prints 18 pages per minute. A school needs 45 copies of a 24-page booklet. The printer must pause for 5 minutes after every 300 pages it prints, to cool down; no pause is needed after the final page. How many minutes does the whole print job take?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers:
+- The printer prints 18 pages per minute.
+- The school needs 45 copies of a 24-page booklet.
+- The printer pauses for 5 minutes after every 300 pages it prints.
+
+Rules:
+- The printer prints 18 pages per minute.
+- The school needs 45 copies of a 24-page booklet, which means \(45 \times 24 = 1080\) pages in total.
+- The printer pauses for 5 minutes after every 300 pages it prints.
+- No pause is needed after the final page.
+
+Step 1: Calculate the total time to print 1080 pages without considering pauses.
+\[
+\text{Time to print 1080 pages} = \frac{1080 \text{ pages}}{18 \text{ pages per minute}} = 60 \text{ minutes}
+\]
+
+Step 2: Determine the number of pauses needed.
+\[
+\text{Number of pauses} = \left\lfloor \frac{1080 \text{ pages}}{300 \text{ pages per pause}} \right\rfloor = 3 \text{ pauses}
+\]
+
+Step 3: Calculate the total time for pauses.
+\[
+\text{Total pause time} = 3 \text{ pauses} \times 5 \text{ minutes per pause} = 15 \text{ minutes}
+\]
+
+Step 4: Calculate the total time for the print job.
+\[
+\text{Total time} = \text{Time to print} + \text{Total pause time} = 60 \text{ minutes} + 15 \text{ minutes} = 75 \text{ minutes}
+\]
+
+Check:
+- The printer prints 18 pages per minute, so 1080 pages take 60 minutes.
+- The printer pauses after every 300 pages, and 1080 pages require 3 pauses.
+- The total time is 60 minutes for printing plus 15 minutes for pauses, which totals 75 minutes.
+
+Final Answer: 75 minutes
+
+---
+Extracted answer: 75.0  (via final_answer_line)
+Expected answer:  75
+Correct: True
+Output tokens: 459   Latency: 12.126 s

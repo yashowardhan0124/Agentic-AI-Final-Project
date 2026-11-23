@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Today, Ravi is 3 times as old as his daughter. In 12 years, Ravi will be exactly twice as old as his daughter. How old will Ravi be 5 years from today?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 40
+
+---
+Extracted answer: 40.0  (via final_answer_line)
+Expected answer:  41
+Correct: False
+Output tokens: 7   Latency: 2.667 s

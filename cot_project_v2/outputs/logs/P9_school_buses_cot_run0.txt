@@ -1,0 +1,37 @@
+CONDITION: cot   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A school trip has 214 students and 17 teachers. Each bus holds 45 people, and every person on the trip needs a seat. Renting one bus costs $350. What is the total bus rental cost, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+First, we need to calculate the total number of people going on the trip. This includes both students and teachers.
+
+Total number of people = Number of students + Number of teachers
+Total number of people = 214 students + 17 teachers
+Total number of people = 231 people
+
+Next, we need to determine how many buses are required to transport all 231 people. Each bus can hold 45 people.
+
+Number of buses required = Total number of people / Capacity of one bus
+Number of buses required = 231 / 45
+Number of buses required = 5.1333...
+
+Since we can't have a fraction of a bus, we need to round up to the next whole number. Therefore, we need 6 buses.
+
+Now, we need to calculate the total rental cost for 6 buses. Each bus costs $350 to rent.
+
+Total rental cost = Number of buses * Cost per bus
+Total rental cost = 6 buses * $350/bus
+Total rental cost = $2100
+
+Final Answer: $2100
+
+---
+Extracted answer: 2100.0  (via final_answer_line)
+Expected answer:  2100
+Correct: True
+Output tokens: 234   Latency: 6.282 s

@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A recipe uses 250 grams of flour to make 12 cookies. A baker wants to make 90 cookies for a sale. The oven bakes 18 cookies per batch. Flour is sold only in 1-kilogram bags costing $3.20 each. How much does the baker spend on flour, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 12
+
+---
+Extracted answer: 12.0  (via final_answer_line)
+Expected answer:  6.4
+Correct: False
+Output tokens: 7   Latency: 2.895 s

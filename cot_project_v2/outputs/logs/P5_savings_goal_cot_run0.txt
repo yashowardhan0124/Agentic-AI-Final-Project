@@ -1,0 +1,29 @@
+CONDITION: cot   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Aisha starts with $0 and saves $45 per week. After 6 weeks, she spends $80 on a gift. She then doubles her weekly savings rate for the next 4 weeks. How much money does she have saved after these 10 weeks total, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Let's break down the problem step by step:
+
+1. **Initial Savings**: Aisha starts with $0.
+2. **Savings for the first 6 weeks**: She saves $45 per week.
+   - Total savings after 6 weeks = $45/week * 6 weeks = $270.
+3. **Spending on a gift**: She spends $80 on a gift.
+   - Remaining savings after spending = $270 - $80 = $190.
+4. **Doubling her weekly savings rate**: She then saves $45 * 2 = $90 per week for the next 4 weeks.
+   - Total savings for the next 4 weeks = $90/week * 4 weeks = $360.
+5. **Total savings after 10 weeks**: Add the remaining savings after the gift to the savings from the next 4 weeks.
+   - Total savings = $190 + $360 = $550.
+
+Final Answer: 550
+
+---
+Extracted answer: 550.0  (via final_answer_line)
+Expected answer:  550
+Correct: True
+Output tokens: 220   Latency: 6.079 s

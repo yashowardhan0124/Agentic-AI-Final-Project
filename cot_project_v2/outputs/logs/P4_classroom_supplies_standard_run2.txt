@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A teacher orders pencils and pens for 28 students. Each student needs 3 pencils and 2 pens. Pencils come in packs of 12 for $2.40 per pack. Pens come in packs of 10 for $5.00 per pack. Packs cannot be split, so partial packs must still be bought in full. What is the total cost, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 56.80
+
+---
+Extracted answer: 56.8  (via final_answer_line)
+Expected answer:  46.8
+Correct: False
+Output tokens: 10   Latency: 2.413 s

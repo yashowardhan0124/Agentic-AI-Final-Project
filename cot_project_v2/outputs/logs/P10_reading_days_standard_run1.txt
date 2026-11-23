@@ -1,0 +1,18 @@
+CONDITION: standard   RUN: 1   temperature=0.7 seed=1
+
+PROMPT:
+Q: Liam reads 35 pages per day on weekdays (Monday to Friday) and 50 pages per day on Saturdays and Sundays. His book has 480 pages and he has already read 125 of them. He starts reading again on a Monday, which counts as day 1. On which day number does he finish the book?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+53
+Final Answer: 53
+
+---
+Extracted answer: 53.0  (via final_answer_line)
+Expected answer:  10
+Correct: False
+Output tokens: 10   Latency: 2.442 s

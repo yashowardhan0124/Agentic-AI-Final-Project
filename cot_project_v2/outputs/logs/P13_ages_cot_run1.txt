@@ -1,0 +1,44 @@
+CONDITION: cot   RUN: 1   temperature=0.7 seed=1
+
+PROMPT:
+Q: Today, Ravi is 3 times as old as his daughter. In 12 years, Ravi will be exactly twice as old as his daughter. How old will Ravi be 5 years from today?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Let's denote:
+- Ravi's current age as \( R \)
+- His daughter's current age as \( D \)
+
+According to the problem, we have two pieces of information:
+1. Ravi is currently 3 times as old as his daughter: 
+\[ R = 3D \]
+2. In 12 years, Ravi will be twice as old as his daughter:
+\[ R + 12 = 2(D + 12) \]
+
+We can substitute \( R = 3D \) into the second equation:
+\[ 3D + 12 = 2(D + 12) \]
+
+Expanding and simplifying the equation:
+\[ 3D + 12 = 2D + 24 \]
+\[ 3D - 2D = 24 - 12 \]
+\[ D = 12 \]
+
+Now we know his daughter's current age:
+\[ D = 12 \]
+
+Using the first equation to find Ravi's current age:
+\[ R = 3D = 3 \times 12 = 36 \]
+
+To find out how old Ravi will be 5 years from today:
+\[ R + 5 = 36 + 5 = 41 \]
+
+Final Answer: 41
+
+---
+Extracted answer: 41.0  (via final_answer_line)
+Expected answer:  41
+Correct: True
+Output tokens: 274   Latency: 7.287 s

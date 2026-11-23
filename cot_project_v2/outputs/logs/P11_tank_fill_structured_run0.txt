@@ -1,0 +1,50 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Pipe A fills a 600-litre tank in 30 minutes. Pipe B fills the same tank in 20 minutes. A drain empties a full tank in 60 minutes. The tank starts empty and all three are opened at the same time. How many minutes does it take to fill the tank?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers:
+- Pipe A fills the tank in 30 minutes.
+- Pipe B fills the tank in 20 minutes.
+- The drain empties the tank in 60 minutes.
+- The tank's capacity is 600 litres.
+
+Rules:
+- Pipe A fills the tank at a rate of \( \frac{600}{30} = 20 \) litres per minute.
+- Pipe B fills the tank at a rate of \( \frac{600}{20} = 30 \) litres per minute.
+- The drain empties the tank at a rate of \( \frac{600}{60} = 10 \) litres per minute.
+
+Step 1: Calculate the combined filling rate of Pipe A and Pipe B:
+\[ 20 + 30 = 50 \text{ litres per minute} \]
+
+Step 2: Calculate the net rate when all three are opened:
+\[ 50 - 10 = 40 \text{ litres per minute} \]
+
+Step 3: Determine the time required to fill the 600-litre tank at the net rate:
+\[ \frac{600}{40} = 15 \text{ minutes} \]
+
+Check:
+- Pipe A's rate: \( \frac{600}{30} = 20 \) litres per minute.
+- Pipe B's rate: \( \frac{600}{20} = 30 \) litres per minute.
+- Drain's rate: \( \frac{600}{60} = 10 \) litres per minute.
+- Combined filling rate: \( 20 + 30 - 10 = 40 \) litres per minute.
+- Time to fill 600 litres: \( \frac{600}{40} = 15 \) minutes.
+
+Final Answer: 15 minutes
+
+---
+Extracted answer: 15.0  (via final_answer_line)
+Expected answer:  15
+Correct: True
+Output tokens: 411   Latency: 11.147 s

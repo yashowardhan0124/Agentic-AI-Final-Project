@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A school trip has 214 students and 17 teachers. Each bus holds 45 people, and every person on the trip needs a seat. Renting one bus costs $350. What is the total bus rental cost, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 1400
+
+---
+Extracted answer: 1400.0  (via final_answer_line)
+Expected answer:  2100
+Correct: False
+Output tokens: 9   Latency: 2.408 s

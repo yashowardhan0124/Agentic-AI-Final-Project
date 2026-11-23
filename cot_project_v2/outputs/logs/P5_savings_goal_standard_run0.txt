@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Aisha starts with $0 and saves $45 per week. After 6 weeks, she spends $80 on a gift. She then doubles her weekly savings rate for the next 4 weeks. How much money does she have saved after these 10 weeks total, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 260
+
+---
+Extracted answer: 260.0  (via final_answer_line)
+Expected answer:  550
+Correct: False
+Output tokens: 8   Latency: 2.859 s

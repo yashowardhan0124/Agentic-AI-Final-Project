@@ -1,0 +1,53 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A jacket costs $80. A shop marks the price up by 25%, then offers 30% off the marked-up price. A 5% sales tax is then added to the discounted price. What is the final price, in dollars?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers: 
+- The original price of the jacket is $80.
+- The shop marks up the price by 25%.
+- A 30% discount is applied to the marked-up price.
+- A 5% sales tax is added to the discounted price.
+
+Rules: 
+- The price is first increased by 25%.
+- Then, a 30% discount is applied to the new price.
+- Finally, a 5% sales tax is added to the discounted price.
+- The final price is the quantity we are looking for.
+
+Step 1: Calculate the marked-up price.
+The marked-up price is the original price increased by 25%.
+\[ \text{Marked-up price} = 80 + 0.25 \times 80 = 80 + 20 = 100 \]
+
+Step 2: Calculate the discounted price.
+The discounted price is the marked-up price decreased by 30%.
+\[ \text{Discounted price} = 100 - 0.30 \times 100 = 100 - 30 = 70 \]
+
+Step 3: Calculate the final price after adding the sales tax.
+The final price is the discounted price increased by 5%.
+\[ \text{Final price} = 70 + 0.05 \times 70 = 70 + 3.5 = 73.5 \]
+
+Check:
+- The marked-up price is $100.
+- The discounted price is $70.
+- The final price is $73.5.
+- All calculations are correct and follow the given rules.
+
+Final Answer: 73.5
+
+---
+Extracted answer: 73.5  (via final_answer_line)
+Expected answer:  73.5
+Correct: True
+Output tokens: 364   Latency: 10.231 s

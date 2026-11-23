@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: Pipe A fills a 600-litre tank in 30 minutes. Pipe B fills the same tank in 20 minutes. A drain empties a full tank in 60 minutes. The tank starts empty and all three are opened at the same time. How many minutes does it take to fill the tank?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 1500
+
+---
+Extracted answer: 1500.0  (via final_answer_line)
+Expected answer:  15
+Correct: False
+Output tokens: 9   Latency: 2.953 s

@@ -1,0 +1,34 @@
+PROMPT:
+Q: A car gets 25 miles per gallon. Gas costs $4.00 per gallon. The driver starts with a full tank and drives a total of 650 miles over the trip. Based on the total fuel consumed for the whole 650-mile trip, how much does the driver spend on gas, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+To determine how much the driver spends on gas for the 650-mile trip, we need to follow these steps:
+
+1. **Calculate the total fuel needed for the trip:**
+   - The car gets 25 miles per gallon.
+   - The total distance driven is 650 miles.
+   - Total fuel needed = Total distance / Miles per gallon
+   \[
+   \text{Total fuel needed} = \frac{650 \text{ miles}}{25 \text{ miles per gallon}} = 26 \text{ gallons}
+   \]
+
+2. **Calculate the total cost of the fuel:**
+   - The cost of gas is $4.00 per gallon.
+   - Total fuel needed is 26 gallons.
+   - Total cost = Total fuel needed × Cost per gallon
+   \[
+   \text{Total cost} = 26 \text{ gallons} \times 4 \text{ dollars per gallon} = 104 \text{ dollars}
+   \]
+
+Therefore, the driver spends $104 on gas for the 650-mile trip.
+
+Final Answer: 104
+
+---
+Extracted answer: 104.0
+Expected answer:  104
+Correct: True

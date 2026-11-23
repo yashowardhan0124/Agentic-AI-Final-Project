@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A car gets 25 miles per gallon. Gas costs $4.00 per gallon. The driver starts with a full tank and drives a total of 650 miles over the trip. Based on the total fuel consumed for the whole 650-mile trip, how much does the driver spend on gas, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 104
+
+---
+Extracted answer: 104.0  (via final_answer_line)
+Expected answer:  104
+Correct: True
+Output tokens: 8   Latency: 2.941 s

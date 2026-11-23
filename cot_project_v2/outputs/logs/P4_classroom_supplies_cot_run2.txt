@@ -1,0 +1,32 @@
+CONDITION: cot   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A teacher orders pencils and pens for 28 students. Each student needs 3 pencils and 2 pens. Pencils come in packs of 12 for $2.40 per pack. Pens come in packs of 10 for $5.00 per pack. Packs cannot be split, so partial packs must still be bought in full. What is the total cost, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+First, calculate the total number of pencils and pens needed:
+- Total pencils needed: 28 students * 3 pencils/student = 84 pencils
+- Total pens needed: 28 students * 2 pens/student = 56 pens
+
+Next, determine how many packs are needed for pencils and pens:
+- Packs of pencils needed: 84 pencils / 12 pencils/pack = 7 packs (since 7 packs give exactly 84 pencils, no additional pack is needed)
+- Packs of pens needed: 56 pens / 10 pens/pack = 5.6 packs. Since we can't buy a fraction of a pack, we need to round up to the next whole number, which means 6 packs of pens.
+
+Now, calculate the total cost for the packs:
+- Cost of pencils: 7 packs * $2.40/pack = $16.80
+- Cost of pens: 6 packs * $5.00/pack = $30.00
+
+Adding these together gives the total cost:
+- Total cost: $16.80 + $30.00 = $46.80
+
+Final Answer: $46.80
+
+---
+Extracted answer: 46.8  (via final_answer_line)
+Expected answer:  46.8
+Correct: True
+Output tokens: 259   Latency: 7.066 s

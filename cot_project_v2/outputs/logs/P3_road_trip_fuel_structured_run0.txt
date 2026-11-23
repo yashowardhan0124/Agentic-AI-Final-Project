@@ -1,0 +1,48 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A car gets 25 miles per gallon. Gas costs $4.00 per gallon. The driver starts with a full tank and drives a total of 650 miles over the trip. Based on the total fuel consumed for the whole 650-mile trip, how much does the driver spend on gas, in dollars?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers:
+- The car gets 25 miles per gallon.
+- Gas costs $4.00 per gallon.
+- The driver drives a total of 650 miles.
+
+Rules:
+- The driver starts with a full tank and drives the total distance.
+- The fuel consumption is calculated based on the total miles driven.
+- The cost of gas is calculated based on the total gallons of gas consumed.
+
+Step 1: Calculate the total gallons of gas consumed.
+\[
+\text{Total gallons consumed} = \frac{\text{Total miles driven}}{\text{Miles per gallon}} = \frac{650 \text{ miles}}{25 \text{ miles per gallon}} = 26 \text{ gallons}
+\]
+
+Step 2: Calculate the total cost of the gas consumed.
+\[
+\text{Total cost} = \text{Total gallons consumed} \times \text{Cost per gallon} = 26 \text{ gallons} \times 4 \text{ dollars per gallon} = 104 \text{ dollars}
+\]
+
+Check:
+- The driver drove 650 miles, which is within the range of the car's fuel efficiency.
+- The cost calculation is based on the full tank and the total miles driven.
+- The total cost is $104.
+
+Final Answer: 104
+
+---
+Extracted answer: 104.0  (via final_answer_line)
+Expected answer:  104
+Correct: True
+Output tokens: 283   Latency: 8.951 s

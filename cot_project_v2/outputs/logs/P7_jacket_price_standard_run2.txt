@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A jacket costs $80. A shop marks the price up by 25%, then offers 30% off the marked-up price. A 5% sales tax is then added to the discounted price. What is the final price, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 86.75
+
+---
+Extracted answer: 86.75  (via final_answer_line)
+Expected answer:  73.5
+Correct: False
+Output tokens: 10   Latency: 2.459 s

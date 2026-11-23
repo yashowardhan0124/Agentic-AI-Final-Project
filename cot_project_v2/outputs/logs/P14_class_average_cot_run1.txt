@@ -1,0 +1,40 @@
+CONDITION: cot   RUN: 1   temperature=0.7 seed=1
+
+PROMPT:
+Q: A class of 24 students has an average test score of 72. Four students, whose average score was 45, leave the class. Two new students join, scoring 90 and 78. What is the new class average?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+To solve this, we need to calculate the total score of the original class and then adjust for the students who left and the students who joined.
+
+1. **Calculate the total score of the original class:**
+   - The average score of the original class of 24 students is 72.
+   - Total score of the original class = \( 24 \times 72 = 1728 \).
+
+2. **Calculate the total score of the students who left:**
+   - Four students left, with an average score of 45.
+   - Total score of the four students = \( 4 \times 45 = 180 \).
+
+3. **Calculate the total score of the students who joined:**
+   - Two new students joined, scoring 90 and 78.
+   - Total score of the two new students = \( 90 + 78 = 168 \).
+
+4. **Calculate the adjusted total score for the new class:**
+   - Original total score: 1728
+   - Subtract the total score of the students who left: \( 1728 - 180 = 1548 \)
+   - Add the total score of the students who joined: \( 1548 + 168 = 1716 \)
+
+5. **Calculate the new class average:**
+   - The new class has 24 - 4 + 2 = 22 students.
+   - New class average = \( \frac{1716}{22} = 77.909090909 \approx 77.91 \).
+
+Final Answer: 77.91
+
+---
+Extracted answer: 77.91  (via final_answer_line)
+Expected answer:  78
+Correct: False
+Output tokens: 366   Latency: 9.061 s

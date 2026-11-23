@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A phone plan costs $20 per month, which includes the first 5 GB of data. Each GB above 5 GB, up to and including 10 GB, costs $8. Each GB above 10 GB costs $5. Priya used 13 GB this month. What is her bill, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 41
+
+---
+Extracted answer: 41.0  (via final_answer_line)
+Expected answer:  75
+Correct: False
+Output tokens: 7   Latency: 2.814 s

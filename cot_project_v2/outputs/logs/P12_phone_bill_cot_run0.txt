@@ -1,0 +1,27 @@
+CONDITION: cot   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A phone plan costs $20 per month, which includes the first 5 GB of data. Each GB above 5 GB, up to and including 10 GB, costs $8. Each GB above 10 GB costs $5. Priya used 13 GB this month. What is her bill, in dollars?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+The phone plan covers the first 5 GB at $20 per month. For the next 5 GB (from 5 GB to 10 GB), the cost is $8 per GB. For the remaining 3 GB (above 10 GB), the cost is $5 per GB.
+
+Let's calculate the cost for each segment:
+- For the first 5 GB: $20
+- For the next 5 GB (6 to 10 GB): 5 GB * $8/GB = $40
+- For the remaining 3 GB (11 to 13 GB): 3 GB * $5/GB = $15
+
+Adding these up gives the total cost:
+$20 (for the first 5 GB) + $40 (for the next 5 GB) + $15 (for the remaining 3 GB) = $75
+
+Final Answer: 75
+
+---
+Extracted answer: 75.0  (via final_answer_line)
+Expected answer:  75
+Correct: True
+Output tokens: 195   Latency: 5.73 s

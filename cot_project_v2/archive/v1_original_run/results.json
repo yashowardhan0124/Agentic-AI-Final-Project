@@ -1,0 +1,102 @@
+[
+  {
+    "problem_id": "P1_cafe_cups",
+    "condition": "standard",
+    "prompt": "Q: A caf\u00e9 buys cups in boxes of 24. Each box costs $18. The caf\u00e9 needs enough cups for 3 events, needing 150, 90, and 75 cups respectively. The caf\u00e9 already has 40 cups in stock. How many boxes must the caf\u00e9 buy, and what is the total cost? Give the total cost in dollars as your final answer.\nA: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Final Answer: 5",
+    "predicted": 5.0,
+    "expected": 216,
+    "correct": false,
+    "log_file": "logs\\P1_cafe_cups_standard.txt"
+  },
+  {
+    "problem_id": "P1_cafe_cups",
+    "condition": "cot",
+    "prompt": "Q: A caf\u00e9 buys cups in boxes of 24. Each box costs $18. The caf\u00e9 needs enough cups for 3 events, needing 150, 90, and 75 cups respectively. The caf\u00e9 already has 40 cups in stock. How many boxes must the caf\u00e9 buy, and what is the total cost? Give the total cost in dollars as your final answer.\nA: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "First, we need to calculate the total number of cups required for the 3 events:\n- For the first event, the caf\u00e9 needs 150 cups.\n- For the second event, the caf\u00e9 needs 90 cups.\n- For the third event, the caf\u00e9 needs 75 cups.\n\nAdding these up:\n\\[ 150 + 90 + 75 = 315 \\]\n\nThe caf\u00e9 already has 40 cups in stock. Therefore, the number of additional cups needed is:\n\\[ 315 - 40 = 275 \\]\n\nEach box contains 24 cups and costs $18. To find out how many boxes are needed, we divide the number of cups needed by the number of cups per box:\n\\[ \\frac{275}{24} \\approx 11.4583 \\]\n\nSince the caf\u00e9 cannot buy a fraction of a box, they need to round up to the next whole number:\n\\[ \\lceil 11.4583 \\rceil = 12 \\]\n\nNow, we calculate the total cost for 12 boxes:\n\\[ 12 \\times 18 = 216 \\]\n\nTherefore, the total cost is:\n\\[ 216 \\]\n\nFinal Answer: 216",
+    "predicted": 216.0,
+    "expected": 216,
+    "correct": true,
+    "log_file": "logs\\P1_cafe_cups_cot.txt"
+  },
+  {
+    "problem_id": "P2_bookstore_discount",
+    "condition": "standard",
+    "prompt": "Q: A bookstore sells novels for $15 each. They offer a promotion: buy 4 novels, get a 5th one free. Maria wants 13 novels. After applying the free-book promotion, she also gets an additional 10% off the total amount she has to pay. How much does she pay in total, in dollars?\nA: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Final Answer: 143.05",
+    "predicted": 143.05,
+    "expected": 148.5,
+    "correct": false,
+    "log_file": "logs\\P2_bookstore_discount_standard.txt"
+  },
+  {
+    "problem_id": "P2_bookstore_discount",
+    "condition": "cot",
+    "prompt": "Q: A bookstore sells novels for $15 each. They offer a promotion: buy 4 novels, get a 5th one free. Maria wants 13 novels. After applying the free-book promotion, she also gets an additional 10% off the total amount she has to pay. How much does she pay in total, in dollars?\nA: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "First, let's determine how many novels Maria gets for free under the promotion. For every 5 novels, she gets 1 free. So, for 13 novels, she can get 2 free novels (since 13 / 5 = 2 with a remainder of 3). This means she only needs to pay for 11 novels (13 - 2).\n\nThe cost for 11 novels at $15 each is:\n\\[ 11 \\times 15 = 165 \\]\n\nNow, she gets a 10% discount on the total amount. The discount amount is:\n\\[ 165 \\times 0.10 = 16.5 \\]\n\nSo, the total amount after applying the 10% discount is:\n\\[ 165 - 16.5 = 148.5 \\]\n\nTherefore, Maria pays a total of $148.50.\n\nFinal Answer: 148.5",
+    "predicted": 148.5,
+    "expected": 148.5,
+    "correct": true,
+    "log_file": "logs\\P2_bookstore_discount_cot.txt"
+  },
+  {
+    "problem_id": "P3_road_trip_fuel",
+    "condition": "standard",
+    "prompt": "Q: A car gets 25 miles per gallon. Gas costs $4.00 per gallon. The driver starts with a full tank and drives a total of 650 miles over the trip. Based on the total fuel consumed for the whole 650-mile trip, how much does the driver spend on gas, in dollars?\nA: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Final Answer: 104",
+    "predicted": 104.0,
+    "expected": 104,
+    "correct": true,
+    "log_file": "logs\\P3_road_trip_fuel_standard.txt"
+  },
+  {
+    "problem_id": "P3_road_trip_fuel",
+    "condition": "cot",
+    "prompt": "Q: A car gets 25 miles per gallon. Gas costs $4.00 per gallon. The driver starts with a full tank and drives a total of 650 miles over the trip. Based on the total fuel consumed for the whole 650-mile trip, how much does the driver spend on gas, in dollars?\nA: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "To determine how much the driver spends on gas for the 650-mile trip, we need to follow these steps:\n\n1. **Calculate the total fuel needed for the trip:**\n   - The car gets 25 miles per gallon.\n   - The total distance driven is 650 miles.\n   - Total fuel needed = Total distance / Miles per gallon\n   \\[\n   \\text{Total fuel needed} = \\frac{650 \\text{ miles}}{25 \\text{ miles per gallon}} = 26 \\text{ gallons}\n   \\]\n\n2. **Calculate the total cost of the fuel:**\n   - The cost of gas is $4.00 per gallon.\n   - Total fuel needed is 26 gallons.\n   - Total cost = Total fuel needed \u00d7 Cost per gallon\n   \\[\n   \\text{Total cost} = 26 \\text{ gallons} \\times 4 \\text{ dollars per gallon} = 104 \\text{ dollars}\n   \\]\n\nTherefore, the driver spends $104 on gas for the 650-mile trip.\n\nFinal Answer: 104",
+    "predicted": 104.0,
+    "expected": 104,
+    "correct": true,
+    "log_file": "logs\\P3_road_trip_fuel_cot.txt"
+  },
+  {
+    "problem_id": "P4_classroom_supplies",
+    "condition": "standard",
+    "prompt": "Q: A teacher orders pencils and pens for 28 students. Each student needs 3 pencils and 2 pens. Pencils come in packs of 12 for $2.40 per pack. Pens come in packs of 10 for $5.00 per pack. Packs cannot be split, so partial packs must still be bought in full. What is the total cost, in dollars?\nA: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Final Answer: 56.80",
+    "predicted": 56.8,
+    "expected": 46.8,
+    "correct": false,
+    "log_file": "logs\\P4_classroom_supplies_standard.txt"
+  },
+  {
+    "problem_id": "P4_classroom_supplies",
+    "condition": "cot",
+    "prompt": "Q: A teacher orders pencils and pens for 28 students. Each student needs 3 pencils and 2 pens. Pencils come in packs of 12 for $2.40 per pack. Pens come in packs of 10 for $5.00 per pack. Packs cannot be split, so partial packs must still be bought in full. What is the total cost, in dollars?\nA: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "First, let's calculate the total number of pencils and pens needed for 28 students.\n\nEach student needs:\n- 3 pencils\n- 2 pens\n\nTotal number of pencils needed:\n\\[ 28 \\text{ students} \\times 3 \\text{ pencils/student} = 84 \\text{ pencils} \\]\n\nTotal number of pens needed:\n\\[ 28 \\text{ students} \\times 2 \\text{ pens/student} = 56 \\text{ pens} \\]\n\nNext, we need to determine how many packs of pencils and pens are required.\n\nPencils come in packs of 12:\n\\[ \\frac{84 \\text{ pencils}}{12 \\text{ pencils/pack}} = 7 \\text{ packs} \\]\n\nPens come in packs of 10:\n\\[ \\frac{56 \\text{ pens}}{10 \\text{ pens/pack}} = 5.6 \\text{ packs} \\]\n\nSince partial packs cannot be bought, we need to round up to the next whole number:\n\\[ 6 \\text{ packs} \\]\n\nNow, let's calculate the cost for the packs of pencils and pens.\n\nCost of pencils:\n\\[ 7 \\text{ packs} \\times \\$2.40 \\text{ per pack} = \\$16.80 \\]\n\nCost of pens:\n\\[ 6 \\text{ packs} \\times \\$5.00 \\text{ per pack} = \\$30.00 \\]\n\nFinally, we add the costs together to find the total cost:\n\\[ \\$16.80 + \\$30.00 = \\$46.80 \\]\n\nFinal Answer: 46.80",
+    "predicted": 46.8,
+    "expected": 46.8,
+    "correct": true,
+    "log_file": "logs\\P4_classroom_supplies_cot.txt"
+  },
+  {
+    "problem_id": "P5_savings_goal",
+    "condition": "standard",
+    "prompt": "Q: Aisha starts with $0 and saves $45 per week. After 6 weeks, she spends $80 on a gift. She then doubles her weekly savings rate for the next 4 weeks. How much money does she have saved after these 10 weeks total, in dollars?\nA: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Final Answer: 260",
+    "predicted": 260.0,
+    "expected": 550,
+    "correct": false,
+    "log_file": "logs\\P5_savings_goal_standard.txt"
+  },
+  {
+    "problem_id": "P5_savings_goal",
+    "condition": "cot",
+    "prompt": "Q: Aisha starts with $0 and saves $45 per week. After 6 weeks, she spends $80 on a gift. She then doubles her weekly savings rate for the next 4 weeks. How much money does she have saved after these 10 weeks total, in dollars?\nA: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:\nFinal Answer: <number>",
+    "raw_output": "Let's break down the problem step by step:\n\n1. **Initial Savings**: Aisha starts with $0.\n2. **Savings for the first 6 weeks**: She saves $45 per week.\n   - Savings after 6 weeks = $45/week * 6 weeks = $270.\n3. **After 6 weeks, she spends $80 on a gift**:\n   - Remaining savings after spending = $270 - $80 = $190.\n4. **Savings for the next 4 weeks**: She doubles her weekly savings rate to $90 per week.\n   - Savings for the next 4 weeks = $90/week * 4 weeks = $360.\n5. **Total savings after 10 weeks**: \n   - Total savings = $190 + $360 = $550.\n\nFinal Answer: 550",
+    "predicted": 550.0,
+    "expected": 550,
+    "correct": true,
+    "log_file": "logs\\P5_savings_goal_cot.txt"
+  }
+]

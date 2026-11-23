@@ -1,0 +1,51 @@
+CONDITION: cot   RUN: 1   temperature=0.7 seed=1
+
+PROMPT:
+Q: Pipe A fills a 600-litre tank in 30 minutes. Pipe B fills the same tank in 20 minutes. A drain empties a full tank in 60 minutes. The tank starts empty and all three are opened at the same time. How many minutes does it take to fill the tank?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+To determine how long it takes to fill the tank when all three pipes are open, we first need to find the rates at which each pipe operates. 
+
+Pipe A fills the tank in 30 minutes, so its rate is:
+\[
+\frac{1}{30} \text{ tank per minute}
+\]
+
+Pipe B fills the tank in 20 minutes, so its rate is:
+\[
+\frac{1}{20} \text{ tank per minute}
+\]
+
+Pipe C drains the tank in 60 minutes, so its rate is:
+\[
+-\frac{1}{60} \text{ tank per minute}
+\]
+
+When all three pipes are open, the combined rate is the sum of their individual rates:
+\[
+\frac{1}{30} + \frac{1}{20} - \frac{1}{60}
+\]
+
+To add these fractions, we need a common denominator. The least common multiple of 30, 20, and 60 is 60. So we rewrite each fraction with a denominator of 60:
+\[
+\frac{1}{30} = \frac{2}{60}, \quad \frac{1}{20} = \frac{3}{60}, \quad -\frac{1}{60} = -\frac{1}{60}
+\]
+
+Adding these together:
+\[
+\frac{2}{60} + \frac{3}{60} - \frac{1}{60} = \frac{2 + 3 - 1}{60} = \frac{4}{60} = \frac{1}{15}
+\]
+
+The combined rate of the three pipes is \(\frac{1}{15}\) of the tank per minute. This means that the tank will be filled in 15 minutes.
+
+Final Answer: 15
+
+---
+Extracted answer: 15.0  (via final_answer_line)
+Expected answer:  15
+Correct: True
+Output tokens: 403   Latency: 10.334 s

@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A straight fence is 60 meters long. A post is placed at the very start, at the very end, and every 4 meters in between. Each post costs $12. How much do all the posts cost, in dollars?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 150
+
+---
+Extracted answer: 150.0  (via final_answer_line)
+Expected answer:  192
+Correct: False
+Output tokens: 8   Latency: 2.399 s

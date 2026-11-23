@@ -1,0 +1,17 @@
+CONDITION: standard   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: A class of 24 students has an average test score of 72. Four students, whose average score was 45, leave the class. Two new students join, scoring 90 and 78. What is the new class average?
+A: Give ONLY the final numeric answer. Do not show any work. End your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Final Answer: 74
+
+---
+Extracted answer: 74.0  (via final_answer_line)
+Expected answer:  78
+Correct: False
+Output tokens: 7   Latency: 2.345 s

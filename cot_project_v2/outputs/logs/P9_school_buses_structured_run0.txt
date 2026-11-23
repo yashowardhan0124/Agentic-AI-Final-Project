@@ -1,0 +1,64 @@
+CONDITION: structured   RUN: 0   temperature=0.0 seed=0
+
+PROMPT:
+Q: A school trip has 214 students and 17 teachers. Each bus holds 45 people, and every person on the trip needs a seat. Renting one bus costs $350. What is the total bus rental cost, in dollars?
+A: Solve this carefully using exactly this format:
+Given numbers: <list every number in the problem and what it means>
+Rules: <list every condition that changes the math, e.g. rounding up because items come in whole packs, discounts, things already done, and exactly what quantity the question asks for>
+Step 1: <one arithmetic operation only, with its result>
+Step 2: <one arithmetic operation only, with its result>
+(add as many numbered steps as needed, one operation each)
+Check: <recompute each step's result, confirm every rule above was applied, and confirm the answer is the quantity the question asks for>
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Given numbers: 
+- Number of students: 214
+- Number of teachers: 17
+- Number of people per bus: 45
+- Cost to rent one bus: $350
+
+Rules: 
+- Every person on the trip needs a seat.
+- Each bus holds 45 people.
+- Every person on the trip needs a seat, so the total number of people is the sum of students and teachers.
+- The total number of people must be divided by the number of people each bus can hold to determine the number of buses needed.
+- If the division is not exact, one more bus is needed to accommodate the remaining people.
+- The cost to rent one bus is $350.
+- The total rental cost is the number of buses needed multiplied by the cost per bus.
+
+Step 1: Calculate the total number of people.
+\[
+\text{Total number of people} = 214 + 17 = 231
+\]
+
+Step 2: Determine the number of buses needed by dividing the total number of people by the capacity of one bus and rounding up to the nearest whole number.
+\[
+\text{Number of buses needed} = \left\lceil \frac{231}{45} \right\rceil
+\]
+\[
+\frac{231}{45} \approx 5.1333
+\]
+\[
+\left\lceil 5.1333 \right\rceil = 6
+\]
+
+Step 3: Calculate the total rental cost by multiplying the number of buses needed by the cost per bus.
+\[
+\text{Total rental cost} = 6 \times 350 = 2100
+\]
+
+Check:
+- The total number of people is 231, which is more than 45 people per bus, so 6 buses are needed.
+- The division \(\frac{231}{45} \approx 5.1333\) confirms that 6 buses are needed.
+- The total rental cost is \(6 \times 350 = 2100\), which is the correct calculation.
+
+Final Answer: 2100
+
+---
+Extracted answer: 2100.0  (via final_answer_line)
+Expected answer:  2100
+Correct: True
+Output tokens: 469   Latency: 12.492 s

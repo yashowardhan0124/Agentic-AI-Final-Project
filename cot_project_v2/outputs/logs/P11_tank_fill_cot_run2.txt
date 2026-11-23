@@ -1,0 +1,23 @@
+CONDITION: cot   RUN: 2   temperature=0.7 seed=2
+
+PROMPT:
+Q: Pipe A fills a 600-litre tank in 30 minutes. Pipe B fills the same tank in 20 minutes. A drain empties a full tank in 60 minutes. The tank starts empty and all three are opened at the same time. How many minutes does it take to fill the tank?
+A: Let's think step by step. Work through the problem carefully, then end your response with exactly one line formatted as:
+Final Answer: <number>
+
+---
+
+RAW MODEL OUTPUT:
+Pipe A fills the tank at a rate of \(\frac{600}{30} = 20\) litres per minute.
+Pipe B fills the tank at a rate of \(\frac{600}{20} = 30\) litres per minute.
+Pipe B empties the tank at a rate of \(\frac{600}{60} = 10\) litres per minute.
+The combined rate of the three pipes when working together is \(20 + 30 - 10 = 40\) litres per minute.
+Since the tank starts empty, it takes \(\frac{600}{40} = 15\) minutes to fill the tank.
+
+Final Answer: 15
+
+---
+Extracted answer: 15.0  (via final_answer_line)
+Expected answer:  15
+Correct: True
+Output tokens: 156   Latency: 5.856 s
